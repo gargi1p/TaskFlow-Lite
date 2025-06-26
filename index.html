@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TaskFlow Lite</title>
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="stylesheet" href="styles/utilities.css" />
+</head>
+<body>
+  <select class="language-select" id="language-select">
+    <option value="en">English</option>
+    <option value="hi">हिन्दी</option>
+  </select>
+
+  <div class="toggle-theme" id="toggle-theme">🌙 Dark Mode</div>
+
+  <div class="container">
+    <header>
+      <h1 data-i18n="app_title">TaskFlow Lite</h1>
+      <div class="quote-banner" data-i18n="quote">“Productivity is never an accident.”</div>
+    </header>
+
+    <form id="task-form">
+      <input type="text" id="task-input" placeholder="Add a new task" required data-i18n-placeholder="task_placeholder" />
+      <select id="priority-select">
+        <option value="low" selected data-i18n="priority_low">Low</option>
+        <option value="medium" data-i18n="priority_medium">Medium</option>
+        <option value="high" data-i18n="priority_high">High</option>
+      </select>
+      <input type="date" id="due-date" />
+      <button id="add_task" type="submit" data-i18n="add_task">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all" data-i18n="filter_all">All</button>
+      <button class="filter-btn" data-filter="active" data-i18n="filter_active">Active</button>
+      <button class="filter-btn" data-filter="completed" data-i18n="filter_completed">Completed</button>
+    </div>
+
+    <ul id="task-list"></ul>
+
+    <div class="stats" id="task-stats">Total: 0 | Active: 0 | Completed: 0</div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
