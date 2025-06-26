@@ -1,7 +1,7 @@
 // app.js (Final Update: Priority, Due Date, Pin, Reminders, Multilingual)
-import { loadTasks, saveTasks } from './storage.js';
-import { renderTaskList } from './render.js';
-import { validateTaskInput } from './validation.js';
+import { loadTasks, saveTasks } from './modules/storage.js';
+import { renderTaskList } from './modules/render.js';
+import { validateTaskInput } from './modules/validation.js';
 
 let tasks = loadTasks();
 let currentFilter = 'all';
